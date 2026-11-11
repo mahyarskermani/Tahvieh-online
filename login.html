@@ -4,9 +4,9 @@
 /* Havaresan Iranian visual language — Tahvieh Online login */
 :root{color-scheme:light;--ink:#183c51;--muted:#718592;--glass:#ffffff70;--stroke:#ffffffdc;--blue:#1b506c}
 body{background:radial-gradient(ellipse at 15% 10%,#ffffff 0%,#f2f6f7 35%,#e3edf1 74%,#d7e4e9 100%)!important;color:var(--ink)!important;font-family:Tahoma,Arial,sans-serif!important}
-.shell{display:flex!important;min-height:100svh;justify-content:center;align-items:center;padding:35px 16px!important}
-.formside{max-width:650px!important;width:100%;margin:auto!important;padding:35px clamp(20px,5vw,44px)!important;display:flex;flex-direction:column;align-items:stretch;background:linear-gradient(135deg,#ffffffba,#e7f0f4a8 52%,#dce9ed9c)!important;border:1px solid #ffffff!important;border-radius:38px!important;box-shadow:0 24px 85px #3b617015!important;backdrop-filter:blur(18px)}
-.hero{display:none!important}
+.shell{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;min-height:100svh;align-items:stretch;padding:0!important;gap:0!important}
+.formside{max-width:690px!important;width:calc(100% - 48px);margin:auto!important;padding:35px clamp(20px,4vw,44px)!important;display:flex;flex-direction:column;align-items:stretch;background:linear-gradient(135deg,#ffffff9c,#e7f0f48a 52%,#dce9ed7a)!important;border:1px solid #ffffffdf!important;border-radius:38px!important;box-shadow:0 24px 85px #3b617025,inset 0 1px 0 #fff!important;-webkit-backdrop-filter:blur(24px) saturate(145%);backdrop-filter:blur(24px) saturate(145%)}
+.hero{display:flex!important;min-height:100svh!important;background:linear-gradient(125deg,#0b1925,#142e41)!important}
 .back{order:2;align-self:flex-start;margin:0 0 23px!important;color:#69808d!important;font-size:14px!important}
 .brand{order:1;flex-direction:column;text-align:center;justify-content:center;gap:7px!important;margin:0 0 26px!important}
 .brand .mark{display:grid;place-items:center;width:116px;height:116px;font-size:80px!important;line-height:1;color:#f87817!important;text-shadow:0 6px 20px #ff790020;animation:fanTurn 18s linear infinite}
@@ -27,7 +27,7 @@ body{background:radial-gradient(ellipse at 15% 10%,#ffffff 0%,#f2f6f7 35%,#e3edf
 .hint{color:#778c97!important;text-align:center!important;font-size:12px!important;line-height:2.2!important}
 .formside>.hint{order:4;margin-top:27px}
 .error{color:#ba4235!important}
-@media(max-width:850px){.shell{padding:22px 12px!important;align-items:center}.formside{padding:30px 24px!important;border-radius:32px!important;max-width:610px!important}.brand .mark{width:105px;height:105px;font-size:75px!important}.panel h1{font-size:27px!important}.back{margin-bottom:20px!important}}
+@media(max-width:850px){.shell{grid-template-columns:1fr!important;padding:0!important;align-items:center}.hero{min-height:250px!important;order:-1!important;padding:18px!important}.hero img{height:145px!important}.formside{padding:30px 24px!important;border-radius:32px!important;max-width:610px!important}.brand .mark{width:105px;height:105px;font-size:75px!important}.panel h1{font-size:27px!important}.back{margin-bottom:20px!important}}
 @media(max-width:400px){.formside{padding:24px 18px!important}.brand strong{font-size:23px!important}.panel h1{font-size:25px!important}.field input{min-height:57px!important}.primary{min-height:60px!important}}
 </style></head><body><main class="shell"><section class="formside"><a class="back" href="index.html">← بازگشت به فروشگاه</a><div class="brand"><span class="mark">✺</span><div><strong>تهویه آنلاین</strong><small>Tahvieh Online</small></div></div><div class="panel"><h1 id="heading">ورود و ثبت‌نام</h1><p class="sub" id="description">شماره موبایل خود را وارد کنید تا کد ورود برایتان ارسال شود.</p>
 <div id="phone-step"><div class="field"><label for="phone">شماره موبایل</label><input id="phone" inputmode="tel" autocomplete="tel" maxlength="11" placeholder="09123456789"></div><p class="error" id="phone-error"></p><button class="primary" onclick="continuePhone()">ادامه با پیامک</button></div>
